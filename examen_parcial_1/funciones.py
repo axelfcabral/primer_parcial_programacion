@@ -30,7 +30,7 @@ def obtener_numeros_naturales():
     return numero
 
 def obtener_lista_de_caracteres(longitud):
-    lista = []
+    clave = ""
     for i in range(longitud):
         opcion_caracter = randint(1,3)
         if opcion_caracter == 1:
@@ -42,8 +42,8 @@ def obtener_lista_de_caracteres(longitud):
         else:
             numero_natural = obtener_numeros_naturales()
             caracter = numero_natural
-        lista += [caracter]
-    return lista
+        clave += (f"{caracter}")
+    return clave
 
 
 def obtener_lista_de_claves(cantidad_claves):
@@ -53,4 +53,5 @@ def obtener_lista_de_claves(cantidad_claves):
         listas += [obtener_lista_de_caracteres(longitud)]
     return listas
 
-claves = obtener_lista_de_claves(3)
+claves = obtener_lista_de_caracteres(8)
+print(claves)
