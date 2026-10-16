@@ -18,6 +18,7 @@ mensaje_clave: str = """
 -> """
 
 mensaje_error: str = """[X] VALOR INGRESADO INCORRECTO [X]"""
+cantidad_claves = None
 claves = None
 menu = None
 
@@ -29,9 +30,10 @@ while menu != 5:
 
     match menu:
         case 1:
-            claves = int(input(mensaje_clave))
-            claves = validar_entero(menu, mensaje_menu, mensaje_error)
-            claves= []
+            cantidad_claves = int(input(mensaje_clave))
+            cantidad_claves = validar_entero(menu, mensaje_menu, mensaje_error)
+            claves = obtener_lista_de_claves(cantidad_claves)
+            print(claves)
         case 2:
             print("Ingresaste a dos")
 

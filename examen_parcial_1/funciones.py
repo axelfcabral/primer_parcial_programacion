@@ -53,5 +53,15 @@ def obtener_lista_de_claves(cantidad_claves):
         listas += [obtener_lista_de_caracteres(longitud)]
     return listas
 
-claves = obtener_lista_de_caracteres(8)
+
+def obtener_claves_en_string(lista_de_claves):
+    claves_string = ""
+
+    for i in range(len(lista_de_claves)):
+        claves_string += lista_de_claves[i] + "\n"
+
+    return claves_string
+
+lista_claves = obtener_lista_de_claves(8)
+claves = obtener_claves_en_string(lista_claves)
 print(claves)
